@@ -1,0 +1,6 @@
+pt-BR:
+  helpers:
+    submit:
+      breed: 'Enviar'
+      dog: 'Enviar'
+      client: 'Enviar'

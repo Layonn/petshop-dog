@@ -1,27 +1,13 @@
 # README
+
+* Criação do banco de dados
+rails db:create
+
+* Inicialização do banco de dados
 rails db:migrate
 rails db:seed
 
+* Rodar suíte de testes:
+bundle exec rake
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Nota: Alguns testes que ainda não foram cobertos, além de alguns filtros que devem ser implementados no futuro

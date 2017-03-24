@@ -1,0 +1,20 @@
+<%= form_for breed do |f| %>
+  <% if breed.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <%= t('form.error_messages') %>
+
+      <ul>
+        <% breed.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div><!-- .alert alert-danger -->
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %> <br>
+    <%= f.text_field :name, class:'form-control' %>
+  </div>
+  <br>
+  <%= f.submit t('helpers.submit.breed'), class: 'btn btn-primary pull-right' %>
+<% end %>

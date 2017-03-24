@@ -1,0 +1,16 @@
+pt-BR:
+  activerecord:
+    attributes:
+      breed:
+        name: 'Nome'
+      dog:
+        name: 'Nome'
+        gender: 'Sexo'
+        castrated: 'Castrado'
+        born_in: 'Data de nascimento'
+        last_appointment: 'Última passagem pela clínica'
+        breed: 'Raça'
+        client: 'Proprietário'
+      client:
+        name: 'Nome'
+        phone_number: 'Telefone'

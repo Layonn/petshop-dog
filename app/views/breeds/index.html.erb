@@ -1,0 +1,31 @@
+<% if notice %>
+  <div class="alert alert-success alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t('labels.breed.name') %></th>
+      <th>
+        <%= link_to t('labels.breed.create'), new_breed_path, class: 'btn btn-primary pull-right' %>
+      </th>
+    </tr>
+  </thead>
+
+  <tr class="row">
+    <% @breeds.each do |breed| %>
+      <tr>
+        <td><%= breed.name %></td>
+        <td>
+          <div class="btn-group pull-right">
+            <%= link_to t('labels.breed.update'), edit_breed_path(breed), class: 'btn btn-sm btn-default' %>
+            <%= link_to t('labels.breed.destroy'), breed, class: 'btn btn-sm btn-danger', method: :delete, data: {confirm: t('labels.confirm.breed')} %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tr>
+</table>

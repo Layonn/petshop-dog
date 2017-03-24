@@ -1,0 +1,33 @@
+<% if notice %>
+  <div class="alert alert-success alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
+
+<%= render 'search_form' %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t('labels.dog.name') %></th>
+      <th>
+        <%= link_to t('labels.dog.create'), new_dog_path, class: 'btn btn-primary pull-right' %>
+      </th>
+    </tr>
+  </thead>
+
+  <tr class="row">
+    <% @dogs.each do |dog| %>
+      <tr>
+        <td><%= dog.name %></td>
+        <td>
+          <div class="btn-group pull-right">
+            <%= link_to t('labels.dog.update'), edit_dog_path(dog), class: 'btn btn-sm btn-default' %>
+            <%= link_to t('labels.dog.destroy'), dog, class: 'btn btn-sm btn-danger', method: :delete, data: {confirm: t('labels.confirm.dog')} %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tr>
+</table>

@@ -1,0 +1,23 @@
+pt-BR:
+  labels:
+    project:
+      name: 'Pet Shop'
+    breed:
+      name: 'Nome da raça'
+      create: 'Cadastrar'
+      update: 'Alterar'
+      destroy: 'Excluir'
+    dog:
+      name: 'Nome do cachorro'
+      create: 'Cadastrar'
+      update: 'Alterar'
+      destroy: 'Excluir'
+    client:
+      name: 'Nome'
+      create: 'Cadastrar'
+      update: 'Alterar'
+      destroy: 'Excluir'
+    confirm:
+      breed: 'Tem certeza que deseja excluir o registro?'
+      dog: 'Tem certeza que deseja excluir o registro?'
+      client: 'Tem certeza que deseja excluir o registro?'

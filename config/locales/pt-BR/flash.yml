@@ -1,0 +1,23 @@
+pt-BR:
+  flash:
+    breeds:
+      create:
+        notice: 'Raça cadastrada com sucesso.'
+      update:
+        notice: 'Raça atualizada com sucesso.'
+      destroy:
+        notice: 'Raça deletada com sucesso.'
+    dogs:
+      create:
+        notice: 'Cachorro cadastrado com sucesso.'
+      update:
+        notice: 'Cachorro atualizado com sucesso.'
+      destroy:
+        notice: 'Cachorro deletado com sucesso.'
+    clients:
+      create:
+        notice: 'Cliente cadastrado com sucesso.'
+      update:
+        notice: 'Cliente atualizado com sucesso.'
+      destroy:
+        notice: 'Cliente excluido com sucesso.'

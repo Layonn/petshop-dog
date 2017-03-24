@@ -1,0 +1,49 @@
+<%= form_for dog do |f| %>
+  <% if dog.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <%= t('form.error_messages') %>
+      <ul>
+        <% dog.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div><!-- .alert alert-danger -->
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, class:'form-control' %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :breed %>
+    <%= f.collection_select :breed_id, Breed.all, :id, :name, class:'form-control' %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.select :gender, options_for_select(['Masculino', 'Feminino']), class:'form-control' %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :castrated %>
+    <%= f.select :castrated, options_for_select(['Sim', 'Não']), class:'form-control' %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :born_in %>
+    <%= f.date_select :born_in, class:'form-control' %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :last_appointment %>
+    <%= f.date_select :last_appointment, class:'form-control' %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :client %>
+    <%= f.collection_select :client_id, Client.all, :id, :name, class:'form-control' %>
+  </div>
+  <br>
+  <%= f.submit t('helpers.submit.dog'), class: 'btn btn-primary pull-right' %>
+<% end %>
